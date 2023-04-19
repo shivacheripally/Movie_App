@@ -1,2 +1,3 @@
 export const ADD_MOVIES = 'ADD_MOVIES';
 export const REMOVE_MOVIES = 'REMOVE_MOVIES';
+export const FAVOURITE_MOVIES = 'FAVOURITE_MOVIES';
