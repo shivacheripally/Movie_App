@@ -1,9 +1,8 @@
 import React from "react";
 import {data} from '../data';
-import Navbar from "./Navbar";
-import MovieCard from './MovieCard';
-import "./App.css";
-console.log(data);
+import {Navbar,MovieCard} from './index.js';
+import '../index.css';
+
 export default function App() {
   return (
     <div className="App">

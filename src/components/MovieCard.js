@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../index.css';
 class MovieCard extends React.Component{
   render(){
     const {movie} = this.props;
@@ -12,8 +12,8 @@ class MovieCard extends React.Component{
           <div className="title">{movie.Title}</div>
           <div className="plot">{movie.Plot}</div>
           <div className="footer">
-            <div className="raring">{movie.imdbRating}</div>
-            <button className="favorite-btn">Favorite</button>
+            <div className="rating">{movie.imdbRating}</div>
+            <button className="favourite-btn">Favorite</button>
           </div>
         </div>
       </div>
