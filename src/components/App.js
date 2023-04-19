@@ -1,26 +1,24 @@
 import React from "react";
 import {data} from '../data';
 import {Navbar,MovieCard} from './index.js';
+import {ADD_MOVIES,REMOVE_MOVIES} from '../actions/actionTypes.js';
+import addMovies from '../actions/index';
 import '../index.css';
 
 class App extends React.Component {
   componentDidMount(){
     const {store} = this.props;
     store.subscribe(()=>{
-      console.log("updated");
+      // console.log("updated");
       // this.forceUpdate();
     });
     //make an api call
     //dispatch an action
-    store.dispatch({
-      type: "ADD_MOVIES",
-      movies: data
-    });
-    console.log(store.getState());
+    store.dispatch(addMovies(data));
   }
   render(){
     const movies = this.props.store.getState();
-    console.log('render');
+    // console.log('render');
     return (
       <div className="App">
         <Navbar />
