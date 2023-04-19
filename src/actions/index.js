@@ -1,18 +1,15 @@
-import {ADD_MOVIES,REMOVE_MOVIES} from './actionTypes.js';
+import {ADD_MOVIES,FAVOURITE_MOVIES,REMOVE_MOVIES} from './actionTypes.js';
 
-{
-  type: ADD_MOVIES;
-}
-
-{
-  type: REMOVE_MOVIES;
-}
-
-export function addMovies(Movies){
-
-  //action creators / action typee
+export function addMovies(movies){
   return{
     type: ADD_MOVIES,
-    Movies
+    movies
+  }
+}
+
+export function addFavourites(movie){
+  return{
+    type: FAVOURITE_MOVIES,
+    movie
   }
 }
