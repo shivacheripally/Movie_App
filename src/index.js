@@ -6,14 +6,12 @@ import {createStore} from 'redux';
 import App from './components/App';
 
 const store = createStore(Movies);
-console.log('store',store);
-console.log('state',store.getState());
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <App store={store}/>
   </StrictMode>
 );
